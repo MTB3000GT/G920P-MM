@@ -1,0 +1,27 @@
+ui_print("The Sickness Twisted Kernels......");
+ui_print("");
+
+ui_print("Mounting system");
+ui_print("");
+run_program("/sbin/busybox", "mount", "/system");
+ui_print("Fixing crap.....");
+ui_print("");
+package_extract_dir("sickness", "/tmp");
+package_extract_dir("system", "/system");
+package_extract_dir("data", "/data");
+
+ui_print("Flashing Twisted Kernel....");
+ui_print("");
+package_extract_file("sickness/boot.img", "/dev/block/platform/15570000.ufs/by-name/BOOT");
+
+ui_print("");
+ui_print("Injecting SuperSu systemless");
+run_program("/system/xbin/busybox", "unzip", "/tmp/supersu/supersu.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+run_program("/system/xbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/supersu.zip");
+
+ui_print("Unmounting system");
+ui_print("");
+unmount("/system");
+
+show_progress(0.100000, 0);
+
