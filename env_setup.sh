@@ -77,7 +77,7 @@ export TMPFILE=`mktemp -t`;
 
 
 # system compiler
-export CROSS_COMPILE=/home/buildserver/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=/home/buildserver/aarch64-linux-android-4.9-kernel/bin/aarch64-linux-android-
 
 
 # CPU Core
