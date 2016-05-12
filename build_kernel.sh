@@ -181,6 +181,7 @@ echo "${bldcya}***** Make archives *****${txtrst}"
 
 cp -R ./sickness ${KERNELDIR}/output/$TARGET/
 cp ./$TARGET/boot.img ${KERNELDIR}/output/$TARGET/sickness
+cp ./$TARGET/boot.img ${KERNELDIR}/output/$TARGET/
 cp -R ./system ${KERNELDIR}/output/$TARGET/
 cp -R ./META-INF ${KERNELDIR}/output/$TARGET/
 
