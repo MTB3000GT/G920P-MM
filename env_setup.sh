@@ -77,7 +77,7 @@ export TMPFILE=`mktemp -t`;
 
 
 # system compiler
-export CROSS_COMPILE=/home/buildserver/aarch64-linux-android-6.0-kernel/bin/aarch64-linux-android-
+export CROSS_COMPILE=/home/buildserver/UBERTC-aarch64-linux-android-5.3-kernel/bin/aarch64-linux-android-
 
 # CPU Core
 export NUMBEROFCPUS=`grep 'processor' /proc/cpuinfo | wc -l`;
